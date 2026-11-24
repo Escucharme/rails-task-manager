@@ -1,0 +1,20 @@
+<%= form_with model: task do |f| %>
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: "form-control", placeholder: "e.g. Laundry" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :details %>
+    <%= f.text_area :details, class: "form-control", placeholder: "What needs to be done?" %>
+  </div>
+
+  <% if task.persisted? %>
+    <div class="form-check">
+      <%= f.check_box :completed %>
+      <%= f.label :completed, "This task is completed" %>
+    </div>
+  <% end %>
+
+  <%= f.submit class: "btn btn-primary" %>
+<% end %>

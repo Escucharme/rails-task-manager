@@ -24,6 +24,11 @@
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="navbar">
+      <%= link_to "✅ Task Manager", tasks_path %>
+    </nav>
+    <main class="container">
+      <%= yield %>
+    </main>
   </body>
 </html>

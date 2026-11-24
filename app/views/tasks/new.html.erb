@@ -1,0 +1,9 @@
+<div class="card">
+  <div class="page-header">
+    <h1>New task</h1>
+  </div>
+
+  <%= render "form", task: @task %>
+
+  <%= link_to "← Back to list", tasks_path, class: "footer-link" %>
+</div>
